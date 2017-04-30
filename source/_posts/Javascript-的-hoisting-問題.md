@@ -1,7 +1,7 @@
 ---
 title: Javascript 的 hoisting 問題
 tags: []
-date: 2016-03-03 14:07:56
+date: 2014-03-03 14:07:56
 ---
 
 先讓我們來看看 Javascript 的 scope ，和 C 有什麼不一樣。

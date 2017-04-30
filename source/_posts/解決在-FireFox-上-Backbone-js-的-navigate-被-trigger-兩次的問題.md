@@ -1,7 +1,7 @@
 ---
 title: 解決在 FireFox 上 Backbone.js 的 navigate() 被 trigger 兩次的問題
 tags: []
-date: 2016-06-16 13:51:22
+date: 2014-06-16 13:51:22
 ---
 
 ## 問題

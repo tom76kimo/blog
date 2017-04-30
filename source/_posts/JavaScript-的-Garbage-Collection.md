@@ -1,7 +1,7 @@
 ---
 title: JavaScript 的 Garbage Collection
 tags: []
-date: 2016-03-01 01:21:35
+date: 2014-07-01 01:21:35
 ---
 
 JavaScript 是個有實作 GC(Garbage Collection) 的程式語言，會自動釋放你再也用不到的物件所佔用的記憶體。
@@ -20,13 +20,12 @@ JavaScript 的 GC 演算法把 **自動釋放再也用不到的物件所佔用�
 
 比方說:
 
-<figure class="figure-code code"><figcaption><span>
-</span></figcaption><div class="highlight"><pre>var a = {value: 1};
+```javascript
+var a = {value: 1};
 var b = a;
 a = null;
 b = null;
-</pre></div>
-</figure>
+```
 
 以上的程式碼的第一行說明有一個物件，他長這樣 `{value: 1}` ，然後被 a 跟 b 參考。當在第三行，把 a 設定參考到 null 時，因為還有 b 參考到這個物件，所以這個物件還不能被 collect ，但當到了第四行把 b 也設為 null 時，此時 `{value: 1}` 這個物件就完全沒有被參考到了，這時候這個物件就可以被 GC ，等待 browser 將它所佔用的記憶體釋放。
 
@@ -44,19 +43,19 @@ Mozilla 有一篇文章 Memory Management - JavaScript | MDN [[1]](https://devel
 
 有時候我們會需要把陣列的元素都清除，最簡單也最常見的方法就是
 
-<figure class="figure-code code"><div class="highlight"><pre>var a = ['1', '2', '3'];
+```javascript
+var a = ['1', '2', '3'];
 //....
 a = [];  //reset array
-</pre></div>
-</figure>
+```
 
 將陣列設成 `[]` ，空陣列。
 
 不過對於記憶體的使用來說，這種方式會配置一塊新的記憶體給a參考，然後原本 `['1', '2', '3']` 如果沒有人參考到它，它就進入 GC ，等著被釋放記憶體。最好 `reset` 陣列的方式應該是:
 
-<figure class="figure-code code"><div class="highlight"><pre>a.length = 0;
-</pre></div>
-</figure>
+```javascript
+a.length = 0;
+```
 
 藉由將陣列的長度設為0，既能達到 reset 的效果，又能避免 assign 一個新的陣列`[]`，而額外配置了記憶體。
 
@@ -64,22 +63,21 @@ a = [];  //reset array
 
 使用 setTimeout 時也可以注意記憶體的配置
 
-<figure class="figure-code code"><figcaption><span>不好的使用方式
-</span></figcaption><div class="highlight"><pre>setTimeout(function(){
+不好的使用方式
+```javascript
+setTimeout(function(){
     //do something....
 }, 500);
-</pre></div>
-</figure>
-
+```
 上面這段程式碼會每0.5秒配置一個新的記憶體區塊擺放那個匿名 function ，這樣會不斷的配置新的記憶體，不太好。
 
-<figure class="figure-code code"><figcaption><span>好的使用方式
-</span></figcaption><div class="highlight"><pre>function doSomething(){
+好的使用方式
+```javascript
+function doSomething(){
   //do something...
 }
 setTimeout(doSomething, 500);
-</pre></div>
-</figure>
+```
 
 應該要用這樣參考到 doSomething 的方式來避免不斷配置新的記憶體
 
