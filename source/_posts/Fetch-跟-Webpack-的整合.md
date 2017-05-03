@@ -12,21 +12,19 @@ date: 2016-06-15 15:28:47
 
 重點就是這一段：
 
-<figure class="figure-code code"><figcaption><span>
-</span></figcaption><div class="highlight"><pre>plugins: [
+```javascript
+plugins: [
   new webpack.ProvidePlugin({
     'fetch': 'imports?this=&gt;global!exports?global.fetch!whatwg-fetch'
   })
 ]
-</pre></div>
-</figure>
+```
 
 然後要記得先安裝
 
-<figure class="figure-code code"><figcaption><span>
-</span></figcaption><div class="highlight"><pre>$ npm i imports-loader exports-loader --save
-</pre></div>
-</figure>
+```bash
+$ npm i imports-loader exports-loader --save
+```
 
 應該就可以正常被 webpack
 
