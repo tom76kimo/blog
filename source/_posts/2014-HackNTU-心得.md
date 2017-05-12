@@ -2,6 +2,7 @@
 title: 2014 HackNTU 心得
 tags: []
 date: 2014-06-15 18:44:54
+keywords: 2014,HackNTU,心得
 ---
 
 今年參加了台大舉辦的 2014 HackNTU
