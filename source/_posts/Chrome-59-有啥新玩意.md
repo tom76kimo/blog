@@ -2,7 +2,7 @@
 title: Chrome 59 有啥新玩意?
 date: 2017-05-22 22:42:23
 tags: ['Chrome']
-keywords: Chrome,59,new,stuff
+keywords: Chrome,59,new,stuff,Chrome59
 ---
 
 Chrome 59 版發行在即，它究竟有什麼新玩意呢?
