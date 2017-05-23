@@ -5,6 +5,8 @@ tags: ['Chrome']
 keywords: Chrome,59,new,stuff,Chrome59
 ---
 
+<img src="https://source.unsplash.com/NfFOlEuBzno/800x450" width="100%">
+
 Chrome 59 版發行在即，它究竟有什麼新玩意呢?
 
 #### 1. CSS and JS code coverage
