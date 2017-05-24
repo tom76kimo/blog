@@ -13,12 +13,12 @@ Chrome 59 版發行在即，它究竟有什麼新玩意呢?
 
 Chrome 新增了一個 Coverage 的 tab，能夠找出沒有用到(被執行)的 CSS 跟 JS 程式碼
 
-<img src=https://developers.google.com/web/updates/images/2017/04/coverage.png style="max-width: 700px;" />
+<img src=https://developers.google.com/web/updates/images/2017/04/coverage.png style="max-width: 700px;" width="100%" />
 Image credit by [Google](developers.google.com)
 
 對比你的網站載入的檔案大小，找出實際用到的程式碼究竟占了其中的多少。然後你可以斟酌減少實際上根本沒有用到的程式碼。
 
-<img src=https://developers.google.com/web/updates/images/2017/04/coverage-breakdown.png style="max-width: 700px;" />
+<img src=https://developers.google.com/web/updates/images/2017/04/coverage-breakdown.png style="max-width: 700px;"  width="100%" />
 Image credit by [Google](developers.google.com)
 
 點擊檔案可以看到詳細的程式碼執行涵蓋率，綠色的部分表示有被執行，紅色表示沒有被執行，而紅綠交雜的部份表示這一行程式碼只有部分被執行(e.g. 判斷式: `var b = (a > 0) ? a : 0`)
@@ -38,7 +38,7 @@ Image credit by [Google](developers.google.com)
 #### 3. Block requests
 
 Chrome 可以模擬你的網站某個 request(script, stylesheet 或是其他資源) 被 block 的情況，藉此來看看你的網站會有什麼反應，來做出更好的使用者體驗。
-<img src=https://developers.google.com/web/updates/images/2017/04/block-request-url.png style="max-width: 700px;" />
+<img src=https://developers.google.com/web/updates/images/2017/04/block-request-url.png style="max-width: 700px;" width="100%" />
 Image credit by [Google](developers.google.com)
 
 #### 4. Step over async await
