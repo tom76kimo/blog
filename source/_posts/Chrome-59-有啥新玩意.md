@@ -33,7 +33,7 @@ Image credit by [Google](developers.google.com)
 有些網頁很長很長，比如 Yahoo 的 [mobile site](https://tw.mobi.yahoo.com)，可以一直往下捲往下捲往下捲，現在 Chrome 讓你可以為這種網站製作一張超長的 screenshot。
 可以看看影片介紹
 
-{% iframe https://www.youtube.com/embed/r_6_9eFPhxI 560 315 %}
+<iframe src=https://www.youtube.com/embed/r_6_9eFPhxI width=100% style="max-width: 700px; min-height: 315px;" frameBorder=0 allowfullscreen ></iframe>
 
 #### 3. Block requests
 
