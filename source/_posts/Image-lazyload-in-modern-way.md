@@ -2,7 +2,15 @@
 title: 圖片延遲載入的現代作法
 date: 2019-03-23 15:08:26
 tags: ['image lazy load', 'image', 'lazy']
-keywords: ['image lazy load', 'image', 'lazy', '延遲載入', '圖片']
+keywords:
+    [
+        'image lazy load',
+        'image',
+        'lazy',
+        '延遲載入',
+        '圖片',
+        'IntersectionObserver',
+    ]
 ---
 
 ### 背景知識
