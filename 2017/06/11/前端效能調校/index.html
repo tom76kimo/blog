@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Tom Wu,tom76kimo@gmail.com"><title>前端效能調校基礎 · 湯姆餡's Blog</title><meta name="description" content="其實精確一點，這篇文章想討論的是 Rendering Performance，也就是網頁在跟使用者互動的過程中，要怎麼樣才能有流暢的體驗。尤其 mobile device 的處理能力比較弱，要在受限制的環境展現良好的使用者體驗又更是個挑戰。
+我們先看看在這方面表現優秀的網站 Google I/O 2"><meta name="keywords" content="前端,效能,動畫,animation,performance,front-end,pixel-pipeline"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/blog/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/blog/css/style.css"><link rel="stylesheet" href="/blog/css/blog_basic.css"><link rel="stylesheet" href="/blog/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-46674413-7",'auto');ga('send','pageview');</script></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/blog/images/logo@2x.png" style="width:127px;"><h3 title><a href="/">湯姆餡's Blog</a></h3><div class="description"><p>程式、信仰、人生</p></div></div></div><ul class="social-links"><li><a href="https://twitter.com/tom76kimo"><i class="fa fa-twitter"></i></a></li><li><a href="http://instagram.com/tom76kimo"><i class="fa fa-instagram"></i></a></li><li><a href="/blog/atom.xml"><i class="fa fa-rss"></i></a></li><li><a href="http://github.com/tom76kimo"><i class="fa fa-github"></i></a></li></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai</a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/blog/">首頁</a></li><li><a href="/blog/archives">歸檔</a></li><li><a href="/blog/links">友站連結</a></li></div><div class="information"><div class="back_btn"><li><a onclick="window.history.go(-1)" class="fa fa-chevron-left"></a></li></div><div class="avatar"><img src="https://www.gravatar.com/avatar/46d51fec35d177693b418e4466dea33a?s=180"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>前端效能調校基礎</a></h3></div><div class="post-content"><p>其實精確一點，這篇文章想討論的是 Rendering Performance，也就是網頁在跟使用者互動的過程中，要怎麼樣才能有流暢的體驗。尤其 mobile device 的處理能力比較弱，要在受限制的環境展現良好的使用者體驗又更是個挑戰。</p>
+<p>我們先看看在這方面表現優秀的網站 <a href="https://events.google.com/io2015/" target="_blank" rel="noopener">Google I/O 2015</a>，在右上角（手機開啟的話是在左上角）的 Navigation 按按切換玩玩看，你可以發現網站的動畫相當的流暢。網頁內容也都可以點點按按，整個表現都相當不錯。</p>
+<p>要達到流暢的網頁使用者體驗，其實是有些技巧的，但要學習這些技巧之前，我們需要先了解瀏覽器是怎麼 Rendering 的。</p>
+<h3 id="Pixel-Pipeline"><a href="#Pixel-Pipeline" class="headerlink" title="Pixel Pipeline"></a>Pixel Pipeline</h3><img alt="Pixel Pipeline Stage" src="https://developers.google.com/web/fundamentals/performance/rendering/images/intro/frame-full.jpg" style="max-width: 700px;" width="100%">
+<div class="tip">**請把這張圖記在心裡、請把這張圖記在心裡、請把這張圖記在心裡，因為超重要** </div>
+
+<p><strong>Pixel to Screen</strong> 會照順序經過五個階段：</p>
+<ul>
+<li><strong>JavaScript</strong>, 這個階段就是你用 JS 去對畫面做出視覺上的改變，舉凡增減元素、使用 jQuery 的 <code>animate</code> 或是排序你的資料都是。因為他們最終都會對視覺做出改變。</li>
+</ul>
+<ul>
+<li><p><strong>Style</strong>, 在這個階段瀏覽器會根據 CSS selector 判斷 CSS 的 rules 必須要提交到哪些元素。 我們的 CSS 可能會寫 </p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.header</span> &gt; <span class="selector-class">.navigation</span> &gt; <span class="selector-class">.items</span></span><br></pre></td></tr></table></figure>
+
+<p> 之類的階層，哪些元素會被哪些規則影響，有什麼樣的 style，就是在這個階段決定。</p>
+</li>
+</ul>
+<ul>
+<li><strong>Layout</strong>, 瀏覽器知道哪些元素會對應到哪些 style 後，這個階段計算各個元素會在螢幕上佔用多少的空間(e.g. 寬、高)，以及在螢幕上的位置等等。注意，每個元素都有可能會影響其他的元素，比如 <code>&lt;body&gt;</code> 的 style，可能會影響他所有的子元素的寬。</li>
+</ul>
+<ul>
+<li><strong>Paint</strong>, 這個階段會將這些 pixel 繪製在多重的、被稱作 layer 的平面上，包含繪製文字、顏色、圖像、陰影等等，其實就是包含了元素所有的視覺(visual)部分</li>
+</ul>
+<ul>
+<li><strong>Composite</strong>, 因為一個頁面瀏覽器會把它切成許多不同的 layer，必須要妥善的處理這些 layer 再照順序把它們繪製到螢幕上。尤其要處理不同 layer 之間 overlap 的情形，瀏覽器必須正確的繪製哪些部分是被蓋住的，哪些部分是必須讓使用者看到要畫出來的。</li>
+</ul>
+<h3 id="調校-Performance-的藝術就是避免做事情"><a href="#調校-Performance-的藝術就是避免做事情" class="headerlink" title="調校 Performance 的藝術就是避免做事情"></a>調校 Performance 的藝術就是避免做事情</h3><p>保持一個心態，能不做我就不做，這樣就對了(請不要用在工作或是待人處事上)。</p>
+<p><strong>1. JS / CSS &gt; Style &gt; Layout &gt; Paint &gt; Composite</strong><br>    假如你更動了所謂的 “layout” 屬性，例如：元素的 width、height、left、top。不論你是用 JS 還是 CSS 的方式去更動，瀏覽器必須要去重新計算各個元素的位置跟大小（就算你只改了一個元素，這個元素也可能影響了其他的元素，所以都要重算），這個行為稱為 <strong>Reflow</strong>。然後瀏覽器必須去重新繪製被影響的元素，組出畫面來。也就是 Pixel Pipeline 的五個階段都會執行到。</p>
+<p><strong>2. JS / CSS &gt; Style &gt; Paint &gt; Composite</strong><br>    假如你只更動了所謂的 “Paint Only” 屬性，比如：元素的 background image、text color 或是 shadow，更動這些特性不會影響頁面的 layout，所以讓瀏覽器可以跳過 Pixel Pipeline 中的 layout 這個步驟。像這樣的行為稱為 repaint。少做一件事，YA!<br>    <img alt="Pixel Pipeline Stage" src="https://developers.google.com/web/fundamentals/performance/rendering/images/intro/frame-no-layout.jpg" style="max-width: 500px;" width="100%"></p>
+<p><strong>3. JS / CSS &gt; Style &gt; Composite</strong><br>    更甚者，某些行為不會啟動瀏覽器的 reflow，也不會啟動 repaint，它只會執行 compositing。這是 performance 最好，也是我們的終極目標，可以用在解決網頁的捲動或是動畫這樣高壓力或是說最容易出現卡頓(jank)的情況。<br>    <img alt="Pixel Pipeline Stage" src="https://developers.google.com/web/fundamentals/performance/rendering/images/intro/frame-no-layout-paint.jpg" style="max-width: 500px;" width="100%"></p>
+<p>現在只有兩種屬性可以達成這個目標，就是 <code>transform</code> 跟 <code>opacity</code>。如果可能用 transform 跟 opacity 來達到一樣的效果，就應該要用。因為這兩個屬性只會觸發 composite。</p>
+<img alt="Composite-Only" src="https://developers.google.com/web/fundamentals/performance/rendering/images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg" style="max-width: 500px;" width="100%">
+
+<p>更甚者，我們還可以對你計畫要動畫的元素，去 promote 它，為它新增一個 compositor layer。透過如下的方式：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.moving-element</span> &#123;</span><br><span class="line">  <span class="attribute">will-change</span>: transform;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>對於不支援 <code>will-change</code> 的瀏覽器，使用：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.moving-element</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateZ</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>這樣透過新增 compositor layer 的方式可以讓動畫運行的更順暢，因為瀏覽器支援同時繪製 multiple layers。但新增 layer 也意味著多消耗記憶體，所以要小心的使用這個 promote 的功能。</p>
+<h3 id="為什麼這些很重要"><a href="#為什麼這些很重要" class="headerlink" title="為什麼這些很重要"></a>為什麼這些很重要</h3><p>因為現在大部分的機器一秒更新 screen 60次，也就是說一個 frame 約 <strong>16ms</strong> (1 secode / 60 = 16.66ms)。如果 Pixel Pipeline 執行一次超過 16ms 通常就會造成畫面的卡頓，然而除去瀏覽器自己的工作，我們必須把我們能控制的計算(process time)壓在 <strong>10ms</strong> 以內才是比較理想的狀況。</p>
+<h3 id="進階閱讀"><a href="#進階閱讀" class="headerlink" title="進階閱讀"></a>進階閱讀</h3><p>在上述的 Pixel Pipeline 裡，每個階段都有可以 optimize 的地方，之後會再發文章說明。但等不及的話可以先看看：</p>
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution" target="_blank" rel="noopener">Optimize JavaScript Execution</a></li>
+<li><a href="https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations" target="_blank" rel="noopener">Reduce the Scope and Complexity of Style Calculations</a></li>
+</ul>
+<p>Reference</p>
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/performance/rendering/" target="_blank" rel="noopener">Rendering Performace</a></li>
+<li><a href="https://aerotwist.com/blog/flip-your-animations/" target="_blank" rel="noopener">FLIP Your Animations</a></li>
+<li><a href="https://developers.google.com/web/fundamentals/performance/rail" target="_blank" rel="noopener">Measure Performance with the RAIL Model</a></li>
+</ul>
+<p>All photos in this article credit to <a href="https://developers.google.com" target="_blank" rel="noopener">Web Fundamentals</a></p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-06-11</span><i class="fa fa-comment-o"></i><a href="/blog/2017/06/11/前端效能調校/#comments">評論</a><i class="fa fa-tag"></i><a href="/blog/tags/效能/" title="效能" class="tag">效能 </a><a href="/blog/tags/前端/" title="前端" class="tag">前端 </a></div></div></div></div><div class="share"><div class="evernote"><a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></div><div class="weibo"><a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></div><div class="twitter"><a href="http://twitter.com/home?status=,http://tom76kimo.github.io/blog/2017/06/11/前端效能調校/,湯姆餡's Blog,前端效能調校基礎,;" class="fa fa-twitter"></a></div></div><div class="facebook"><iframe src="https://www.facebook.com/plugins/like.php?href=http://tom76kimo.github.io/blog/2017/06/11/前端效能調校/&amp;width=89&amp;layout=button_count&amp;action=like&amp;size=small&amp;show_faces=true&amp;share=true&amp;height=46&amp;appId=1794411820874236" width="120" height="28" style="border:none;overflow:hidden;margin-left:25px;margin-top:20px;" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a role="navigation" href="/blog/2019/03/23/Image-lazyload-in-modern-way/" title="圖片延遲載入的現代作法" class="btn">上一篇</a></li><li class="next pagbuttons"><a role="navigation" href="/blog/2017/05/22/Chrome-59-有啥新玩意/" title="Chrome 59 有啥新玩意?" class="btn">下一篇</a></li></ul></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'tom76kimo';
+var disqus_identifier = '2017/06/11/前端效能調校/';
+var disqus_title = '前端效能調校基礎';
+var disqus_url = 'http://tom76kimo.github.io/blog/2017/06/11/前端效能調校/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//tom76kimo.disqus.com/count.js" async></script></div></div></div></div><script src="/blog/js/jquery.js"></script><script src="/blog/js/jquery-migrate-1.2.1.min.js"></script><script src="/blog/js/jquery.appear.js"></script></body></html>

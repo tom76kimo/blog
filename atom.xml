@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>湯姆餡&#39;s Blog</title>
+  
+  <subtitle>程式 信仰 人生</subtitle>
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="http://tom76kimo.github.io/blog/"/>
+  <updated>2021-03-03T04:19:07.096Z</updated>
+  <id>http://tom76kimo.github.io/blog/</id>
+  
+  <author>
+    <name>tom76kimo</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>圖片延遲載入的現代作法</title>
+    <link href="http://tom76kimo.github.io/blog/2019/03/23/Image-lazyload-in-modern-way/"/>
+    <id>http://tom76kimo.github.io/blog/2019/03/23/Image-lazyload-in-modern-way/</id>
+    <published>2019-03-23T07:08:26.000Z</published>
+    <updated>2021-03-03T04:19:07.096Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;背景知識&quot;&gt;&lt;a href=&quot;#背景知識&quot; class=&quot;headerlink&quot; title=&quot;背景知識&quot;&gt;&lt;/a&gt;背景知識&lt;/h3&gt;&lt;p&gt;為了改善網頁的 load performance，我們很自然地會想到圖片的延遲載入。其精神是避免網站在一開始就載入使用者根本
+      
+    
+    </summary>
+    
+    
+      <category term="image lazy load" scheme="http://tom76kimo.github.io/blog/tags/image-lazy-load/"/>
+    
+      <category term="image" scheme="http://tom76kimo.github.io/blog/tags/image/"/>
+    
+      <category term="lazy" scheme="http://tom76kimo.github.io/blog/tags/lazy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端效能調校基礎</title>
+    <link href="http://tom76kimo.github.io/blog/2017/06/11/%E5%89%8D%E7%AB%AF%E6%95%88%E8%83%BD%E8%AA%BF%E6%A0%A1/"/>
+    <id>http://tom76kimo.github.io/blog/2017/06/11/前端效能調校/</id>
+    <published>2017-06-11T04:13:13.000Z</published>
+    <updated>2021-03-03T04:19:07.097Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;其實精確一點，這篇文章想討論的是 Rendering Performance，也就是網頁在跟使用者互動的過程中，要怎麼樣才能有流暢的體驗。尤其 mobile device 的處理能力比較弱，要在受限制的環境展現良好的使用者體驗又更是個挑戰。&lt;/p&gt;
+&lt;p&gt;我們先看看在這方面
+      
+    
+    </summary>
+    
+    
+      <category term="效能" scheme="http://tom76kimo.github.io/blog/tags/%E6%95%88%E8%83%BD/"/>
+    
+      <category term="前端" scheme="http://tom76kimo.github.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome 59 有啥新玩意?</title>
+    <link href="http://tom76kimo.github.io/blog/2017/05/22/Chrome-59-%E6%9C%89%E5%95%A5%E6%96%B0%E7%8E%A9%E6%84%8F/"/>
+    <id>http://tom76kimo.github.io/blog/2017/05/22/Chrome-59-有啥新玩意/</id>
+    <published>2017-05-22T14:42:23.000Z</published>
+    <updated>2021-03-03T04:19:07.095Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;img src=&quot;https://source.unsplash.com/NfFOlEuBzno/800x450&quot; width=&quot;100%&quot;&gt;
+
+&lt;p&gt;Chrome 59 版發行在即，它究竟有什麼新玩意呢?&lt;/p&gt;
+&lt;h4 id=&quot;1-CSS-and-JS-code-cover
+      
+    
+    </summary>
+    
+    
+      <category term="Chrome" scheme="http://tom76kimo.github.io/blog/tags/Chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>程式就像天書一樣</title>
+    <link href="http://tom76kimo.github.io/blog/2017/05/13/%E7%A8%8B%E5%BC%8F%E5%B0%B1%E5%83%8F%E5%A4%A9%E6%9B%B8%E4%B8%80%E6%A8%A3/"/>
+    <id>http://tom76kimo.github.io/blog/2017/05/13/程式就像天書一樣/</id>
+    <published>2017-05-13T04:08:25.000Z</published>
+    <updated>2021-03-03T04:19:07.098Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我現職是個前端工程師(Front-End Engineer)。不像很多有名的大神，雖然不是很喜歡唸書，但是從小就開始接觸程式，寫軟體，然後變成程式界的大神。我只是純粹不喜歡唸書而已。&lt;/p&gt;
+&lt;p&gt;直到大學我才真正地接觸到了程式，但實在提不起我的興趣，寫了一堆天書般的程式碼
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="http://tom76kimo.github.io/blog/tags/programming/"/>
+    
+      <category term="Yahoo" scheme="http://tom76kimo.github.io/blog/tags/Yahoo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Watching Google I/O livestream</title>
+    <link href="http://tom76kimo.github.io/blog/2017/05/10/I-O-livestream/"/>
+    <id>http://tom76kimo.github.io/blog/2017/05/10/I-O-livestream/</id>
+    <published>2017-05-10T03:24:37.000Z</published>
+    <updated>2021-03-03T04:19:07.096Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;The stream will be available on May 17-19.&lt;/p&gt;
+&lt;iframe src=&quot;https://events.google.com/io/embed&quot; width=&quot;100%&quot; height=&quot;500&quot; frameborder=&quot;0&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="Google" scheme="http://tom76kimo.github.io/blog/tags/Google/"/>
+    
+      <category term="I/O" scheme="http://tom76kimo.github.io/blog/tags/I-O/"/>
+    
+      <category term="Live" scheme="http://tom76kimo.github.io/blog/tags/Live/"/>
+    
+      <category term="io17" scheme="http://tom76kimo.github.io/blog/tags/io17/"/>
+    
+      <category term="2017" scheme="http://tom76kimo.github.io/blog/tags/2017/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5分鐘免費幫你的網站加上https</title>
+    <link href="http://tom76kimo.github.io/blog/2017/05/09/5%E5%88%86%E9%90%98%E5%85%8D%E8%B2%BB%E5%B9%AB%E4%BD%A0%E7%9A%84%E7%B6%B2%E7%AB%99%E5%8A%A0%E4%B8%8Ahttps/"/>
+    <id>http://tom76kimo.github.io/blog/2017/05/09/5分鐘免費幫你的網站加上https/</id>
+    <published>2017-05-09T14:18:12.000Z</published>
+    <updated>2021-03-03T04:19:07.095Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://letsencrypt.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Let’s Encrypt&lt;/a&gt; 是 Internet Security Research Group (ISRG) 所建立的一個 Cert
+      
+    
+    </summary>
+    
+    
+      <category term="https" scheme="http://tom76kimo.github.io/blog/tags/https/"/>
+    
+      <category term="ssl" scheme="http://tom76kimo.github.io/blog/tags/ssl/"/>
+    
+      <category term="letsencrypt" scheme="http://tom76kimo.github.io/blog/tags/letsencrypt/"/>
+    
+      <category term="free" scheme="http://tom76kimo.github.io/blog/tags/free/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>為過去幾年與疾病的奮鬥做紀錄</title>
+    <link href="http://tom76kimo.github.io/blog/2017/04/29/%E7%82%BA%E9%81%8E%E5%8E%BB%E5%B9%BE%E5%B9%B4%E8%88%87%E7%96%BE%E7%97%85%E7%9A%84%E5%A5%AE%E9%AC%A5%E5%81%9A%E7%B4%80%E9%8C%84/"/>
+    <id>http://tom76kimo.github.io/blog/2017/04/29/為過去幾年與疾病的奮鬥做紀錄/</id>
+    <published>2017-04-29T09:40:12.000Z</published>
+    <updated>2021-03-03T04:19:07.098Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;大概是將近三年前發病的。&lt;/p&gt;
+&lt;p&gt;那一天晚上我覺得好像要死掉了，呼吸變得很困難，喘不過氣，一直有即將要休克的感覺。還記得那天晚上只有我在家，半夜三點，就叫了救護車載我去醫院。護理師問我有沒有糖尿病，我說不知道〈當然就我所知是沒有，但是看到我當下的狀況我什麼都不確定了〉
+      
+    
+    </summary>
+    
+    
+      <category term="個人" scheme="http://tom76kimo.github.io/blog/tags/%E5%80%8B%E4%BA%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Atomic CSS 介紹</title>
+    <link href="http://tom76kimo.github.io/blog/2016/06/17/Atomic-CSS-%E4%BB%8B%E7%B4%B9/"/>
+    <id>http://tom76kimo.github.io/blog/2016/06/17/Atomic-CSS-介紹/</id>
+    <published>2016-06-17T02:31:10.000Z</published>
+    <updated>2021-03-03T04:19:07.095Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h3&gt;&lt;p&gt;這篇文章想介紹一下 &lt;a href=&quot;http://acss.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Ato
+      
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="http://tom76kimo.github.io/blog/tags/CSS/"/>
+    
+      <category term="programming" scheme="http://tom76kimo.github.io/blog/tags/programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>改造 logdown 版面</title>
+    <link href="http://tom76kimo.github.io/blog/2016/06/16/%E6%94%B9%E9%80%A0-logdown-%E7%89%88%E9%9D%A2/"/>
+    <id>http://tom76kimo.github.io/blog/2016/06/16/改造-logdown-版面/</id>
+    <published>2016-06-16T05:47:42.000Z</published>
+    <updated>2021-03-03T04:19:07.098Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其實我一直覺得 logdown 的版面沒那麼對我的胃口，所以我小小的修改了一下，讓我使用的時候看起來更舒服。&lt;/p&gt;
+&lt;h4 id=&quot;原本的版面&quot;&gt;&lt;a href=&quot;#原本的版面&quot; class=&quot;headerlink&quot; title=&quot;原本的版面&quot;&gt;&lt;/a&gt;原本的版面&lt;/h4&gt;&lt;figure&gt;![](http://user-image.logdown.io/user/6035/blog/6047/post/737444/gSs94Yd0Si2NnB67FXAn_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-15%20%E4%B8%8B%E5%8D%886.10.01.png)&lt;/figure&gt;
+
+&lt;h4 id=&quot;改動後的版面&quot;&gt;&lt;a href=&quot;#改動後的版面&quot; class=&quot;headerlink&quot; title=&quot;改動後的版面&quot;&gt;&lt;/a&gt;改動後的版面&lt;/h4&gt;&lt;figure&gt;![](http://user-image.logdown.io/user/6035/blog/6047/post/737444/YpcIR7BxQ2qzlgOIP9UX_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-15%20%E4%B8%8B%E5%8D%886.10.32.png)&lt;/figure&gt;
+
+&lt;p&gt;這樣有比較好嗎？應該有吧XD&lt;/p&gt;
+&lt;p&gt;如果你也想達到這樣的效果：&lt;/p&gt;
+&lt;p&gt;在 dashboard 按-&amp;gt;blog設定-&amp;gt;佈景主題-&amp;gt;選擇目前的佈景主題來修改&lt;/p&gt;
+&lt;p&gt;在 &lt;heade&gt; 裡面加上&lt;/heade&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>紀念一下大排長龍的無敵家</title>
+    <link href="http://tom76kimo.github.io/blog/2016/06/15/%E7%B4%80%E5%BF%B5%E4%B8%80%E4%B8%8B%E5%A4%A7%E6%8E%92%E9%95%B7%E9%BE%8D%E7%9A%84%E7%84%A1%E6%95%B5%E5%AE%B6/"/>
+    <id>http://tom76kimo.github.io/blog/2016/06/15/紀念一下大排長龍的無敵家/</id>
+    <published>2016-06-15T15:58:30.000Z</published>
+    <updated>2021-03-03T04:19:07.099Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;這是位於池袋的 無敵家 拉麵，真是難得我會去這種需要排隊的店，約莫排了一個小時有，才終於吃到。我想會大排長龍的原因是因為店內的位置非常少。&lt;/p&gt;
+&lt;p&gt;拉麵湯頭極為濃郁，喝一口就好像要滿出來了，但說真的還不錯吃，價格也很平易近人。&lt;/p&gt;
+&lt;figure&gt;![](http
+      
+    
+    </summary>
+    
+    
+      <category term="個人" scheme="http://tom76kimo.github.io/blog/tags/%E5%80%8B%E4%BA%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fetch 跟 Webpack 的整合</title>
+    <link href="http://tom76kimo.github.io/blog/2016/06/15/Fetch-%E8%B7%9F-Webpack-%E7%9A%84%E6%95%B4%E5%90%88/"/>
+    <id>http://tom76kimo.github.io/blog/2016/06/15/Fetch-跟-Webpack-的整合/</id>
+    <published>2016-06-15T07:28:47.000Z</published>
+    <updated>2021-03-03T04:19:07.096Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在專案裡面 &lt;code&gt;require(&amp;#39;fetch&amp;#39;)&lt;/code&gt; ，再執行 webpack ，會噴出一堆 error 。&lt;/p&gt;
+&lt;p&gt;目前 fetch 在前端的支援還不足，解法可參考此篇文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://mts.io
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用underscore.js來escape HTML</title>
+    <link href="http://tom76kimo.github.io/blog/2016/03/01/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8underscore-js%E4%BE%86escape-HTML/"/>
+    <id>http://tom76kimo.github.io/blog/2016/03/01/如何使用underscore-js來escape-HTML/</id>
+    <published>2016-02-29T17:22:43.000Z</published>
+    <updated>2021-03-03T04:19:07.097Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在使用Backbone的時候，若使用underscore來compile你的html檔&lt;/p&gt;
+&lt;p&gt;為了預防XSS攻擊，我們應該要將輸出的字串做escaping，尤其是這段字串是自由讓某個使用者輸入的情形下，&lt;/p&gt;
+&lt;p&gt;更應該要escape。&lt;/p&gt;
+&lt;p&gt;使用und
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript 的 Garbage Collection</title>
+    <link href="http://tom76kimo.github.io/blog/2014/07/01/JavaScript-%E7%9A%84-Garbage-Collection/"/>
+    <id>http://tom76kimo.github.io/blog/2014/07/01/JavaScript-的-Garbage-Collection/</id>
+    <published>2014-06-30T17:21:35.000Z</published>
+    <updated>2021-03-03T04:19:07.097Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;JavaScript 是個有實作 GC(Garbage Collection) 的程式語言，會自動釋放你再也用不到的物件所佔用的記憶體。&lt;/p&gt;
+&lt;h2 id=&quot;Life-Cycle&quot;&gt;&lt;a href=&quot;#Life-Cycle&quot; class=&quot;headerlink&quot; tit
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>解決在 FireFox 上 Backbone.js 的 navigate() 被 trigger 兩次的問題</title>
+    <link href="http://tom76kimo.github.io/blog/2014/06/16/%E8%A7%A3%E6%B1%BA%E5%9C%A8-FireFox-%E4%B8%8A-Backbone-js-%E7%9A%84-navigate-%E8%A2%AB-trigger-%E5%85%A9%E6%AC%A1%E7%9A%84%E5%95%8F%E9%A1%8C/"/>
+    <id>http://tom76kimo.github.io/blog/2014/06/16/解決在-FireFox-上-Backbone-js-的-navigate-被-trigger-兩次的問題/</id>
+    <published>2014-06-16T05:51:22.000Z</published>
+    <updated>2021-03-03T04:19:07.099Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;問題&quot;&gt;&lt;a href=&quot;#問題&quot; class=&quot;headerlink&quot; title=&quot;問題&quot;&gt;&lt;/a&gt;問題&lt;/h2&gt;&lt;p&gt;當我使用 navigate() 時，發現有的 routes 會被執行兩次，找了好久找不出原因。&lt;/p&gt;
+&lt;figure class=&quot;hig
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2014 HackNTU 心得</title>
+    <link href="http://tom76kimo.github.io/blog/2014/06/15/2014-HackNTU-%E5%BF%83%E5%BE%97/"/>
+    <id>http://tom76kimo.github.io/blog/2014/06/15/2014-HackNTU-心得/</id>
+    <published>2014-06-15T10:44:54.000Z</published>
+    <updated>2021-03-03T04:19:07.095Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今年參加了台大舉辦的 2014 HackNTU&lt;/p&gt;
+&lt;p&gt;感謝Bert、仲言、海如願意跟我一起組隊&lt;/p&gt;
+&lt;p&gt;這是我人生第一次參加 Hackathon，一場為時30小時的競賽，我們要在裡面激盪出作品來。&lt;/p&gt;
+&lt;p&gt;在比賽開始前我們就決定題目了，我們發現現在大學教授的網站大都…很醜，像是上一個世代的 Web 介面，我們希望能夠為教授們產生一個 Reader friendly 的介面，而且對教授來說要很簡單使用，可以讓以往幫教授 maintain 網站的可憐研究生省下不少麻煩。 另一個重要的功能是能夠搜尋各大學的教授資料，讓想要找教授的學生們可以有一個統一的平台能夠找的到，我們想這樣會很方便。&lt;/p&gt;
+&lt;p&gt;所以我們要做的就是改造教授們的網站這一件事，我覺得我們的目標很明確，沒有把問題設定的太大。&lt;/p&gt;
+&lt;p&gt;開發中遇到了不少問題，在這裡簡單檢討列一下&lt;/p&gt;
+&lt;h4 id=&quot;使用的開發方式不夠快&quot;&gt;&lt;a href=&quot;#使用的開發方式不夠快&quot; class=&quot;headerlink&quot; title=&quot;使用的開發方式不夠快&quot;&gt;&lt;/a&gt;使用的開發方式不夠快&lt;/h4&gt;&lt;p&gt;我使用 BackboneJS + requireJS 來開發，在這樣緊湊的時間要生出作品來，使用這樣幾乎沒幫你做什麼事的 framework 讓開發的速度不夠快。 在時間不夠的情形下應該還是要使用一些可以快速開發的語言，以後 Javascript 可以改用 Coffeescript ， CSS 改用 SASS ， HTML 試著用 Jade ， framework 方面可以改用 AngularJS 。&lt;/p&gt;
+&lt;p&gt;不過這次可喜的是用了 &lt;a href=&quot;http://yeoman.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Yeoman&lt;/a&gt; ，這真是好用的工具，會自動產生需要的 Grunt file 跟 compile 工具，每次要建立新的 Model 或是 View 只要簡單的在 terminal 輸入&lt;code&gt;yo backbone:model ModelName&lt;/code&gt;，就會自動幫我產生以&lt;code&gt;define(){return Backbone.Model.extend({})}&lt;/code&gt;包好的 module ，實在方便。(而且明明有 livereload 我竟然忘了打開)&lt;/p&gt;
+&lt;h4 id=&quot;之前沒有先串接配搭好&quot;&gt;&lt;a href=&quot;#之前沒有先串接配搭好&quot; class=&quot;headerlink&quot; title=&quot;之前沒有先串接配搭好&quot;&gt;&lt;/a&gt;之前沒有先串接配搭好&lt;/h4&gt;&lt;p&gt;在開發過程發生許多前端跟後端 Cross domain CRUD 的搭配問題，其實這在比賽開始前就應該要先配搭好，整個偕同開發環境也先有配合過會比較好，免得到現場手忙腳亂。 後來在 POST 遇到了一時無解的問題，感謝 Bert 緊急改用 Parse 來解決資料庫的處理，雖然 Parse 不太熟悉的情況下，要拿它來開發還是費了一番功夫，但總算還是解決了問題。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Javascript 的 hoisting 問題</title>
+    <link href="http://tom76kimo.github.io/blog/2014/03/03/Javascript-%E7%9A%84-hoisting-%E5%95%8F%E9%A1%8C/"/>
+    <id>http://tom76kimo.github.io/blog/2014/03/03/Javascript-的-hoisting-問題/</id>
+    <published>2014-03-03T06:07:56.000Z</published>
+    <updated>2021-03-03T04:19:07.097Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;先讓我們來看看 Javascript 的 scope ，和 C 有什麼不一樣。&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
