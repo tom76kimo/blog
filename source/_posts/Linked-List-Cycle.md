@@ -1,7 +1,7 @@
 ---
 title: Linked List Cycle
 date: 2021-03-03 14:08:51
-tags:
+tags: ["Algorithm", "Linked List"]
 ---
 
 給定一個 Linked List，請寫出一個演算法，告訴我其中有沒有環(cycle/loop)。這是演算法很經典的題目，最簡單的方式就是使用快慢指針 fast/slow，也可以寫成 runner/walker。快指針一次走兩步，慢指針一次走一步，如果他們有碰上，那就是有環。
