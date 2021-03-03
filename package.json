@@ -8,8 +8,9 @@
     "scripts": {
         "build": "hexo generate",
         "deploy": "hexo deploy",
+        "dev": "hexo server",
         "init": "git submodule update --init --recursive",
-        "dev": "hexo server"
+        "publish": "hexo deploy -g"
     },
     "dependencies": {
         "hexo": "^3.9.0",
